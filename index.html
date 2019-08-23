@@ -1,93 +1,187 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link style="border-radius: 50%;" rel="icon" href="title.png">
-    <title>Hamza Islam</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HAMZA ISLAM / Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Montserrat for headings, Cardo for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic,700">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link style="border-radius: 50%;" rel="icon" href="img/icon.jpg">
+    <!-- Leaflet CSS - For the map-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  
   <body>
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Bevan);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
-body {
-  background: #f1b500;
-}
-body, a {
-  color: #222;
-}
-h1 {
-  font-family: "Bevan";
-  font-size: 150px;
-  font-weight: 400;
-  line-height: 130px;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
-  margin: 75px auto 0;
-  text-shadow: 
-    0px 0px 0 rgb(-14,144,41),-1px 1px 0 rgb(-19,139,36),-2px 2px 0 rgb(-23,135,32),-3px 3px 0 rgb(-27,131,28),-4px 4px 0 rgb(-32,126,23),-5px 5px 0 rgb(-36,122,19),-6px 6px 0 rgb(-40,118,15),-7px 7px 0 rgb(-45,113,10),-8px 8px 0 rgb(-49,109,6),-9px 9px 0 rgb(-53,105,2),-10px 10px 0 rgb(-58,100,-3),-11px 11px 0 rgb(-62,96,-7),-12px 12px 0 rgb(-67,91,-12),-13px 13px 0 rgb(-71,87,-16),-14px 14px 0 rgb(-75,83,-20),-15px 15px 0 rgb(-80,78,-25),-16px 16px 0 rgb(-84,74,-29),-17px 17px 0 rgb(-88,70,-33),-18px 18px 0 rgb(-93,65,-38),-19px 19px 0 rgb(-97,61,-42), -20px 20px 0 rgb(-101,57,-46);   
-}
-    h4 { font-family: "Bevan"; }
-h1 span { position: relative }
-h1 span:first-child { 
-  z-index: 15;
-}
-h1 span:nth-child(2) { 
-  z-index: 14;
-  text-shadow:0px 0px 0 rgb(167,42,152),-1px 1px 0 rgb(162,37,147),-2px 2px 0 rgb(158,33,143),-3px 3px 0 rgb(154,29,139),-4px 4px 0 rgb(149,24,134),-5px 5px 0 rgb(145,20,130),-6px 6px 0 rgb(141,16,126),-7px 7px 0 rgb(136,11,121),-8px 8px 0 rgb(132,7,117),-9px 9px 0 rgb(128,3,113),-10px 10px 0 rgb(123,-2,108),-11px 11px 0 rgb(119,-6,104),-12px 12px 0 rgb(114,-11,99),-13px 13px 0 rgb(110,-15,95),-14px 14px 0 rgb(106,-19,91),-15px 15px 0 rgb(101,-24,86),-16px 16px 0 rgb(97,-28,82),-17px 17px 0 rgb(93,-32,78),-18px 18px 0 rgb(88,-37,73),-19px 19px 0 rgb(84,-41,69), -20px 20px 0 rgb(80,-45,65);
-}
-h1 span:nth-child(3) { 
-  z-index: 19;
-  text-shadow:0px 0px 0 rgb(42,142,167),-1px 1px 0 rgb(37,137,162),-2px 2px 0 rgb(33,133,158),-3px 3px 0 rgb(29,129,154),-4px 4px 0 rgb(24,124,149),-5px 5px 0 rgb(20,120,145),-6px 6px 0 rgb(16,116,141),-7px 7px 0 rgb(11,111,136),-8px 8px 0 rgb(7,107,132),-9px 9px 0 rgb(3,103,128),-10px 10px 0 rgb(-2,98,123),-11px 11px 0 rgb(-6,94,119),-12px 12px 0 rgb(-11,89,114),-13px 13px 0 rgb(-15,85,110),-14px 14px 0 rgb(-19,81,106),-15px 15px 0 rgb(-24,76,101),-16px 16px 0 rgb(-28,72,97),-17px 17px 0 rgb(-32,68,93),-18px 18px 0 rgb(-37,63,88),-19px 19px 0 rgb(-41,59,84), -20px 20px 0 rgb(-45,55,80);
-}
-h1 span:nth-child(4) { 
-  z-index: 18;
-  text-shadow:0px 0px 0 rgb(221,-5,59),-1px 1px 0 rgb(216,-10,54),-2px 2px 0 rgb(212,-14,50),-3px 3px 0 rgb(208,-18,46),-4px 4px 0 rgb(203,-23,41),-5px 5px 0 rgb(199,-27,37),-6px 6px 0 rgb(195,-31,33),-7px 7px 0 rgb(190,-36,28),-8px 8px 0 rgb(186,-40,24),-9px 9px 0 rgb(182,-44,20),-10px 10px 0 rgb(177,-49,15),-11px 11px 0 rgb(173,-53,11),-12px 12px 0 rgb(168,-58,6),-13px 13px 0 rgb(164,-62,2),-14px 14px 0 rgb(160,-66,-2),-15px 15px 0 rgb(155,-71,-7),-16px 16px 0 rgb(151,-75,-11),-17px 17px 0 rgb(147,-79,-15),-18px 18px 0 rgb(142,-84,-20),-19px 19px 0 rgb(138,-88,-24), -20px 20px 0 rgb(134,-92,-28);
-}
-h1 span:nth-child(5) { 
-  z-index: 0;
-  text-shadow:0px 0px 0 rgb(42,142,167),-1px 1px 0 rgb(37,137,162),-2px 2px 0 rgb(33,133,158),-3px 3px 0 rgb(29,129,154),-4px 4px 0 rgb(24,124,149),-5px 5px 0 rgb(20,120,145),-6px 6px 0 rgb(16,116,141),-7px 7px 0 rgb(11,111,136),-8px 8px 0 rgb(7,107,132),-9px 9px 0 rgb(3,103,128),-10px 10px 0 rgb(-2,98,123),-11px 11px 0 rgb(-6,94,119),-12px 12px 0 rgb(-11,89,114),-13px 13px 0 rgb(-15,85,110),-14px 14px 0 rgb(-19,81,106),-15px 15px 0 rgb(-24,76,101),-16px 16px 0 rgb(-28,72,97),-17px 17px 0 rgb(-32,68,93),-18px 18px 0 rgb(-37,63,88),-19px 19px 0 rgb(-41,59,84), -20px 20px 0 rgb(-45,55,80);
-}
-.o { 
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 14px;
-  -ms-transform: rotate(25deg);
-  -moz-transform: rotate(25deg);
-  -o-transform: rotate(45deg);
-  -webkit-transform: rotate(25deg);
-  transform: rotate(25deg);
-}
-h1 span .i{ 
-  z-index: 14;
-  text-shadow:0px 0px 0 rgb(167,42,152),-1px 1px 0 rgb(162,37,147),-2px 2px 0 rgb(158,33,143),-3px 3px 0 rgb(154,29,139),-4px 4px 0 rgb(149,24,134),-5px 5px 0 rgb(145,20,130),-6px 6px 0 rgb(141,16,126),-7px 7px 0 rgb(136,11,121),-8px 8px 0 rgb(132,7,117),-9px 9px 0 rgb(128,3,113),-10px 10px 0 rgb(123,-2,108),-11px 11px 0 rgb(119,-6,104),-12px 12px 0 rgb(114,-11,99),-13px 13px 0 rgb(110,-15,95),-14px 14px 0 rgb(106,-19,91),-15px 15px 0 rgb(101,-24,86),-16px 16px 0 rgb(97,-28,82),-17px 17px 0 rgb(93,-32,78),-18px 18px 0 rgb(88,-37,73),-19px 19px 0 rgb(84,-41,69), -20px 20px 0 rgb(80,-45,65);
-}
-.e {
-  padding-left: 2px;
-}
-p {
-  font-family: "Roboto Condensed";
-  font-size: 23px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: -8px;
-}
-a, a:visited {
-  text-decoration: none;
-  border-bottom: 1px solid red;
-}
-a:hover {
-  color: red;
-}
-  </style>
-    <h1><span class="l">h</span><span class="o">a</span><span class="v">M</span><span class="e">z</span><span class="v">a</span></h1>
-    <h1><span class="i">I</span><span class="o">s</span><span class="v">l</span><span class="e">a</span><span class="v">m</span></h1>
-    <p><small>Site will be uploaded soon</a></small></p>
-    <h4 style="text-align:center;">Website Update</h4>
-    <hr/>
-<p><small>I have scheduled an update on 24th August as I had to make some changes. I will upload my portfolio website on 24th of August 2019.</small></p>
-    <p>Thanks</p>
+    <section id="intro" style="background-image: url('img/bg-1.jpg');" class="intro">       
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="container clearfix">
+          <div class="row">
+            <div class="col-lg-8 col-md-12 mx-auto">
+              <p class="italic">Oh, hello, nice to meet you!</p>
+              <span><small style="font-size: 30px;font-family: Montserrat, sans-serif">I'm </small><h1 style="display: inline-block;">Hamza Islam</h1></span>
+              <p class="italic">6th Semester Computer Science Student</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- intro end-->
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container"><a href="#intro" class="navbar-brand link-scroll"><h2>Hamza Islam</h2></a>
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="#intro" class="nav-link link-scroll">Home</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link link-scroll">About </a></li>
+              <li class="nav-item"><a href="#experience" class="nav-link link-scroll">Experience</a></li>
+              <li class="nav-item"><a href="#education" class="nav-link link-scroll">Education</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-link link-scroll">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- about-->
+    <section id="about" class="text">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="heading">About me</h2>
+            <p class="lead"></p>
+            <p>As a third-year CS student, my primary focus is now on learning new technologies such as Cloud Computing and Data Science. I am also taking interest in front-end technologies like React as I am a web developer.</p>
+            <p>I started web developing back in 2016 using only HTML and CSS. Over the last couple of years, I have learnt a lot of new stuff, mostly about web.</p>
+            <p>I have been working with ASP.NET for last 2 to 3 years. I have provided management solutions to local businesses by using both Web and Desktop applications.</p>
+
+          </div>
+          <div class="col-lg-5 mx-auto">
+            <p><img src="img/portfolio.jpg" alt="" class="img-fluid rounded-circle"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about end-->
+    <!-- Services-->
+    <section id="experience" style="background-color: #eee">
+      <div class="container">
+        <div class="row services">
+          <div class="col-lg-12">
+            <h2 class="heading">Experience</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="box">
+                  <div class="icon" style="text-align: center;"><i class="fa fa-desktop"></i></div>
+                  <h4>HawkIT</h4>
+                  <h6>Nov. 18 - Feb. 19</h6>
+                  <p>I joined HawkIT as Internee Software Engineer. There I worked as .NET developer creating web apps for clients of HawkIT. I used ASP.NET MVC, Entity Framework, ADO.NET and AngualarJs mostly.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <div class="icon" style="text-align: center;"><i class="fa fa-laptop"></i></div>
+                  <h4>Microtechx</h4>
+                  <h6>Jul. 18 - Aug. 18</h6>
+                  <p>I learnt the MVC architecture along Web 2.0 from Microtechx and afterwards built a very basic clone of themeforest.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <div style="text-align: center;" class="icon"><i class="fa fa-globe"></i></div>
+                  <h4>AGR Soft</h4>
+                  <h6>Dec. 17 - Feb. 18</h6>
+                  <p>Here I started learning about Web Forms and different frameworks. I built a site that worked as an admission portal for a college.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services end-->
+    
+    <!-- text page-->
+    <section id="education" class="text-page section-inverse">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="heading">Education</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="box">
+                  <h4>COMSATS University Islamabad, Sahiwal</h4>
+                  <h5>BS(CS)</h5>
+                  <h6>Feb. 17 - Present</h6>
+                  <p style="font-family: Montserrat, sans-serif">Current CGPA : 3.39</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <h4>Govt. College University, Lahore</h4>
+                  <h5>F.Sc(Pre-Engg.)</h5>
+                  <h6>Sep. 14 - Jun. 16</h6>
+                  <p style="font-family: Montserrat, sans-serif">Marks : 82.7%</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <h4>DPS & IC, Sahiwal</h4>
+                  <h5>Matriculation</h5>
+                  <h6>Mar. 03 - Apr. 14</h6>
+                  <p style="font-family: Montserrat, sans-serif">Marks : 92.9%</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="contact" style="background-color: #111;">
+      <div class="container"> 
+        <div class="row copyright">
+          <div class="col-md-3">
+            <p class="mb-md-0 text-center text-md-left">&copy;2019 HAMZA ISLAM</p>
+          </div>
+          <div class="footer-social-links col-md-6">
+			  <a href="https://www.facebook.com/iamHI101" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+			  <a href="https://twitter.com/hamzaislam101" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+			  <a href="https://www.youtube.com/channel/UCEWuojFweBVcIcqXSfr3uAQ" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+			  <a href="https://www.linkedin.com/in/hamzaislam101/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+			  <a href="https://github.com/hamzaislam101" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+			  <a href="mailto:hamzaislam101@gmail.com" title="Email" target="_blank"><i class="fa fa-envelope"></i></a>
+			  <a href="https://stackoverflow.com/users/11242123/hamzaislam101" title="Stack Overflow" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+			</div>
+          <div class="col-md-3">
+            <p class="credit mb-md-0 text-center text-md-right">Template by <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form">Bootstrapious</a></p>
+            <!-- Please do not remove the backlink to us. It is part of the licence conditions. Thanks for understanding :)-->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
+    <script src="js/front.js"></script>
   </body>
 </html>
